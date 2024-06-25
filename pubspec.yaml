@@ -12,12 +12,10 @@ topics:
   - maya
   
 environment:
-  sdk: '>=2.15.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 # Add regular dependencies here.
 dependencies:
   blockchain_utils: ^3.1.0
-  # blockchain_utils:
-  #   path: ../bitcoin/blockchain_utils
 
     
 

@@ -22,8 +22,7 @@ class TendermintProvider {
           throw RPCError(
               message: val["message"]!.toString(),
               errorCode: int.tryParse(val["code"]?.toString() ?? "0") ?? 0,
-              data: val,
-              request: {});
+              request: Map<String, dynamic>.from(val));
         }
         return val;
       } else {
@@ -31,8 +30,7 @@ class TendermintProvider {
           throw RPCError(
               message: val["error"]!.toString(),
               errorCode: int.tryParse(val["code"] ?? "0") ?? 0,
-              data: val,
-              request: {});
+              request: Map<String, dynamic>.from(val));
         }
         return val["result"];
       }
